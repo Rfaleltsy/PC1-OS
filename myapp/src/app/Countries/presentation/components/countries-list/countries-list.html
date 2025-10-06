@@ -1,0 +1,15 @@
+<h2>Countries Information Catalogue</h2>
+
+@if (loading) {
+  <p>Loading countries...</p>
+} @else if (error) {
+  <p>Error loading countries.</p>
+} @else {
+  <div class="countries-grid">
+    @for (country of countries; track country.trackId) {
+      <app-countries-item [country]="country"></app-countries-item>
+    }
+  </div>
+}
+
+

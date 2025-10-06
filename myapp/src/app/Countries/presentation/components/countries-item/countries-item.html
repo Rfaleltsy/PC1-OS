@@ -1,0 +1,16 @@
+<mat-card class="country-card">
+  <img mat-card-image [src]="country.flagUrl" [alt]="'Bandera de ' + country.name" />
+
+  <mat-card-title>{{ country.name }}</mat-card-title>
+
+  <mat-card-content>
+    <p><strong>Capital:</strong> {{ country.capital }}</p>
+    <p><strong>Población:</strong> {{ country.population | number }}</p>
+  </mat-card-content>
+
+  <mat-card-actions class="card-footer">
+    <button mat-button color="primary" (click)="learnMore()">Learn More</button>
+    <span class="spacer"></span>
+    <button mat-button color="accent" (click)="shareCountry()">Share Country</button>
+  </mat-card-actions>
+</mat-card>

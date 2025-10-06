@@ -1,0 +1,12 @@
+/* countries-list.component.scss */
+.countries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+}
