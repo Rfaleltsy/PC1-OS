@@ -1,0 +1,18 @@
+<div class="notification-container">
+  <div 
+    *ngFor="let notification of notifications; trackBy: trackById" 
+    class="notification-toast"
+    [ngClass]="getNotificationClass(notification.type)"
+  >
+    <span class="notification-icon">
+      <span *ngIf="notification.type === 'success'">✓</span>
+      <span *ngIf="notification.type === 'error'">✗</span>
+      <span *ngIf="notification.type === 'info'">i</span>
+      <span *ngIf="notification.type === 'warning'">⚠</span>
+    </span>
+    
+    <div class="notification-message">{{ notification.message }}</div>
+    
+    <button class="notification-close" (click)="dismissNotification(notification.id)">x</button>
+  </div>
+</div>
